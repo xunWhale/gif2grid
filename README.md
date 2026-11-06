@@ -6,6 +6,18 @@ Turn an animated image into one timestamped contact sheet, so vision models can 
 
 I ran into a real failure with multimodal models: most GIF middleware silently compresses an animation into one still frame. A GIF of someone kicking a bottle became “a person sprinting forward” because the continuous action disappeared. `gif2grid` samples the timeline evenly and puts the frames, frame numbers, and millisecond timestamps into one image that can be sent to a VLM in a single request.
 
+## What it looks like
+
+A real 10-frame animation, `demo/motion.gif`. This is what a single-frame middleware hands to the model:
+
+![single frame only](demo/single-frame.png)
+
+And this is what `gif2grid` produces from the same file (`gif2grid demo/motion.gif -o demo/motion-grid.png --frames 9`) — every frame numbered, with the millisecond offset it came from:
+
+![nine frames with timestamps](demo/motion-grid.png)
+
+One image, one request, and the motion is still there.
+
 ## Install
 
 ```bash
