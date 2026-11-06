@@ -1,5 +1,7 @@
 # gif2grid
 
+[![CI](https://github.com/xunWhale/gif2grid/actions/workflows/ci.yml/badge.svg)](https://github.com/xunWhale/gif2grid/actions/workflows/ci.yml)
+
 Turn an animated image into one timestamped contact sheet, so vision models can actually see what happens over time.
 
 ## Why this exists
