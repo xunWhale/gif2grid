@@ -20,13 +20,16 @@ One image, one request, and the motion is still there.
 
 ## Install
 
+Not on PyPI yet - install from git:
+
 ```bash
-pip install gif2grid
+pip install "gif2grid @ git+https://github.com/xunWhale/gif2grid"
 ```
 
 For local development:
 
 ```bash
+git clone https://github.com/xunWhale/gif2grid && cd gif2grid
 pip install -e .
 ```
 
