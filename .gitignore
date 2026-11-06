@@ -11,3 +11,7 @@ build/
 *.png
 *.jpg
 *.jpeg
+
+# demo assets are intentionally tracked
+!demo/*.gif
+!demo/*.png
